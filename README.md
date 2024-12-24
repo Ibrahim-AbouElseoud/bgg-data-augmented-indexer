@@ -7,7 +7,7 @@ If the game name is not found directly in the website then the script will use t
 
 1. Have python 3 installed
 2. `pip install -r requirements.txt`
-3. Have a csv file with columns: Game, Owned by
+3. Have a csv file with columns: Game, Owned by,State,Egyptian Game
 4. Be in the directory of the script with a cmd and type `python bgg_csv_indexer.py`
 5. When prompted for the csv path input the relative path of the file or the absolute path without quotation
 6. The output is generated in the same directory of the script under the name boardgames_indexed.csv
