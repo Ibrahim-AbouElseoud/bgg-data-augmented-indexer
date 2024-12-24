@@ -35,13 +35,15 @@ log = setup_logger('logger', 'bgg_csv_indexer.log')
 
 
 def read_csv(file="games.csv"):
-    """Read CSV, Must have fields: Game,Owned by"""
+    """Read CSV, Must have fields: Game,State,Egyptian Game,Owned by"""
     try:
         with open(file,encoding="utf-8") as f:
             reader = csv.DictReader(f)
             row_data = {}
             for row in reader:
                 row_data['Game']=row['Game']
+                row_data['State']=row['State']
+                row_data['Egyptian Game']=row['Egyptian Game']
                 row_data['Owned by']=row['Owned by']
                 rows_list.append(row_data)
                 row_data = {}
@@ -111,7 +113,7 @@ def get_attributes(game):
 def write_csv(game_dict_list,file_name="boardgames_indexed.csv"):
     log.info("Writing CSV with "+str(len(game_dict_list))+" games")
     # csv header
-    fieldnames = ['game', 'owner','bggName','minPlayers','maxPlayers','complexity','rating','rank','minTime','maxTime','isExpansion','year','categories','mechanics','url']
+    fieldnames = ['game', 'state', 'owner','bggName','minPlayers','maxPlayers','complexity','rating','rank','minTime','maxTime','isEgyptian','isExpansion','year','categories','mechanics','url']
     with open(file_name, 'w', encoding="utf-8", newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -125,6 +127,8 @@ def main():
         game_name=row['Game']
         if game_name == "" or game_name == None:
             continue
+        if row['Egyptian Game'] == "TRUE":
+            isSkip=True
         else:
             game=find(row['Game'],0)
             if(game is None):
@@ -133,7 +137,9 @@ def main():
         if not isSkip:
             game_dict = get_attributes(game)
         game_dict['game']=row['Game']
+        game_dict['state']=row['State']
         game_dict['owner']=row['Owned by']
+        game_dict['isEgyptian']=row['Egyptian Game']
         game_dict_list.append(game_dict)
     
     write_csv(game_dict_list)

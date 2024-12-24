@@ -1,4 +1,5 @@
-game,owner,bggName,minPlayers,maxPlayers,complexity,rating,rank,minTime,maxTime,isExpansion,year,categories,mechanics,url
-Kanagawa,Ibrahim Abouelseoud,Kanagawa,2,4,2.0048,7.0222,868,45,45,False,2016,"['Animals', 'Card Game']","['Hand Management', 'Open Drafting', 'Pattern Building', 'Push Your Luck', 'Set Collection', 'Turn Order: Claim Action', 'Worker Placement']",https://boardgamegeek.com/boardgame/200147
-Funemployed,Ibrahim Abouelseoud,Funemployed,3,20,1.1569,6.63939,2865,30,30,False,2013,"['Card Game', 'Educational', 'Humor', 'Party Game', 'Word Game']","['Acting', 'Open Drafting', 'Player Judge', 'Role Playing', 'Storytelling']",https://boardgamegeek.com/boardgame/142296
-Splendor,Ibrahim Abouelseoud,Splendor,2,4,1.7804,7.41901,230,30,30,False,2014,"['Card Game', 'Economic', 'Renaissance']","['Contracts', 'Open Drafting', 'Race', 'Set Collection']",https://boardgamegeek.com/boardgame/148228
+game,state,owner,bggName,minPlayers,maxPlayers,complexity,rating,rank,minTime,maxTime,isEgyptian,isExpansion,year,categories,mechanics,url
+Kanagawa,Original,Ibrahim Abouelseoud,Kanagawa,2,4,2.0048,7.0222,868,45,45,FALSE,False,2016,"['Animals', 'Card Game']","['Hand Management', 'Open Drafting', 'Pattern Building', 'Push Your Luck', 'Set Collection', 'Turn Order: Claim Action', 'Worker Placement']",https://boardgamegeek.com/boardgame/200147
+Funemployed,Print,Ibrahim Abouelseoud,Funemployed,3,20,1.1569,6.63939,2865,30,30,FALSE,False,2013,"['Card Game', 'Educational', 'Humor', 'Party Game', 'Word Game']","['Acting', 'Open Drafting', 'Player Judge', 'Role Playing', 'Storytelling']",https://boardgamegeek.com/boardgame/142296
+Splendor,Copy,Ibrahim Abouelseoud,Splendor,2,4,1.7804,7.41901,230,30,30,FALSE,False,2014,"['Card Game', 'Economic', 'Renaissance']","['Contracts', 'Open Drafting', 'Race', 'Set Collection']",https://boardgamegeek.com/boardgame/148228
+Wonder Cards,Original,Ibrahim Abouelseoud,,,,,,,,,TRUE,,,,,
