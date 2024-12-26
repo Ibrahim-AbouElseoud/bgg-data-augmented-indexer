@@ -18,6 +18,8 @@ If the game name is not found directly in the website then the script will use t
 2. Input the path of the input csv file without double quotes
 3. The output is generated in the same directory of the executable under the name boardgames_indexed.csv
 
+Note: if running the exe and it closes before completion, then open a console in the location of the exe and type bgg_csv_indexer.exe and it will normally until it finishes.
+
 [Download Exe from here](https://github.com/Ibrahim-AbouElseoud/bgg-data-augmented-indexer/releases)
 
 There is a sample input and output csvs in the repository you can take a look to have an idea of the input and output.

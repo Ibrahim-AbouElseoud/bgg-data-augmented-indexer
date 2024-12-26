@@ -1,4 +1,3 @@
-from distutils.log import error
 from requests_cache.core import CachedSession
 from boardgamegeek import BGGClient
 from boardgamegeek import BGGChoose
