@@ -123,15 +123,20 @@ def main():
         game_dict=dict()
         isSkip=False
         game_name=row['Game']
-        if game_name == "" or game_name == None:
-            continue
-        else:
-            game=find(row['Game'],0)
-            if(game is None):
-                log.info("No entry found for game name: "+game_name+"...skipping...")
-                isSkip=True
-        if not isSkip:
-            game_dict = get_attributes(game)
+        try:
+            if game_name == None or game_name.strip() == "":
+                continue
+            else:
+                game=find(row['Game'].strip(),0)
+                if(game is None):
+                    log.info("No entry found for game name: "+game_name+"...skipping...")
+                    isSkip=True
+            if not isSkip:
+                game_dict = get_attributes(game)
+        
+        except Exception as e:
+            log.error("Exception happened while processing game "+game_name+" so will skip, exception: "+e)
+        
         game_dict['game']=row['Game']
         game_dict['owner']=row['Owned by']
         game_dict_list.append(game_dict)
